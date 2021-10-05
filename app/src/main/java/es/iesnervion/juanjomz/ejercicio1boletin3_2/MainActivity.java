@@ -3,6 +3,7 @@ package es.iesnervion.juanjomz.ejercicio1boletin3_2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.EditText;
@@ -35,11 +36,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void checkedColor(){
-        int colorId= Color.BLACK;
+        int color=Color.BLACK;
         if(rdGroupColor.getCheckedRadioButtonId()==R.id.rBtnRed){
-            colorId= Color.RED;
+            color=Color.RED;
+            txtExample.setTypeface(null, Typeface.NORMAL);
+
+        }else{
+            txtExample.setTypeface(null, Typeface.BOLD);
         }
-        txtExample.setTextColor(colorId);
+        txtExample.setTextColor(color);
     }
 
 
